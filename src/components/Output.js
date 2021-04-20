@@ -1,17 +1,29 @@
 import React, { Component } from 'react'
 
-class Output extends Component {
+export default class Output extends Component {
     render() {
-        const { firstName, lastName, email } = this.props.data;
+        const {
+            firstName,
+            lastName,
+            address,
+            city,
+            usState,
+            zip,
+            phone,
+            email 
+        } = this.props.data;
 
         return ( 
             <div className="main">
                 <div>{firstName}</div>
                 <div>{lastName}</div>
+                <div>{address}</div>
+                <div>{city}</div>
+                <div>{usState}</div>
+                <div>{zip}</div>
+                <div>{phone}</div>
                 <div>{email}</div>
             </div>
         )
     }    
 }
-
-export default Output

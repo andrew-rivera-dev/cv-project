@@ -1,42 +1,20 @@
 import React, { Component } from 'react'
+import Personal from "./Personal"
 
 
-class Form extends Component {
+export default class Form extends Component {
     constructor(props) {
-        super(props)
-        
+        super(props);
         this.handleChange = this.handleChange.bind(this);
     }
     
-    handleChange(e) {
+    handleChange = e => {
         this.props.handleFormChange(e);
     }
 
     render() {
-        const { firstName, lastName, email} = this.props;
         return (
-            <div className="main form">
-                <input 
-                    name="firstName"
-                    value={firstName} 
-                    placeholder="First Name" 
-                    onChange={this.handleChange}
-                />
-                <input 
-                    name="lastName"
-                    value={lastName} 
-                    placeholder="Last Name" 
-                    onChange={this.handleChange}
-                />
-                <input 
-                    name="email"
-                    value={email} 
-                    placeholder="Email" 
-                    onChange={this.handleChange}
-                />
-            </div>
+            <Personal handleChange={this.handleChange} />
         );
     }
 }
-
-export default Form

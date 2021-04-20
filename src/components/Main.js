@@ -9,11 +9,16 @@ export default class Main extends Component {
         this.state = {
             firstName: 'John',
             lastName: 'Doe',
+            address: '123 Main St',
+            city: 'New York',
+            usState: '',
+            zip: '10001',
+            phone: '555-555-5555',
             email: 'example@gmail.com'
         }
     }
     
-    handleFormChange = (e) => {
+    handleFormChange = e => {
         const { name, value } = e.target;
         this.setState({
             [name]: value
@@ -24,7 +29,7 @@ export default class Main extends Component {
     render() {
         return (
             <div className="main-container">
-                <Form handleFormChange={this.handleFormChange}/>
+                <Form data={this.state} handleFormChange={this.handleFormChange}/>
                 <Output data={this.state}/>
             </div>
         )
