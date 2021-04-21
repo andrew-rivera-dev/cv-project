@@ -16,7 +16,7 @@ export default class Personal extends Component {
         } = this.props;
 
         return (
-            <div>
+            <div className="form-component">
                 <input 
                     name="firstName"
                     value={firstName} 

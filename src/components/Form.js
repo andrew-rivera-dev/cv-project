@@ -14,7 +14,10 @@ export default class Form extends Component {
 
     render() {
         return (
-            <Personal handleChange={this.handleChange} />
+            <div className="main form">
+                <h2>Personal Information</h2>
+                <Personal handleChange={this.handleChange} />
+            </div>
         );
     }
 }
