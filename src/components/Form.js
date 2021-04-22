@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Personal from "./Personal"
+import Personal from './Personal'
+import Education from './Education'
 
 
 export default class Form extends Component {
@@ -8,15 +9,15 @@ export default class Form extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
     
-    handleChange = e => {
-        this.props.handleFormChange(e);
+    handleChange = (e, type) => {
+        this.props.handleFormChange(e, type);
     }
 
     render() {
         return (
             <div className="main form">
-                <h2>Personal Information</h2>
-                <Personal handleChange={this.handleChange} />
+                <Personal type="personal" handleChange={this.handleChange} />
+                <Education type="education" handleChange={this.handleChange} />
             </div>
         );
     }

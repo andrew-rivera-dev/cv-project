@@ -3,66 +3,51 @@ import StateSelector from "./Utils/StateSelector"
 
 export default class Personal extends Component {
     render() {
-        const {
-            firstName,
-            lastName,
-            address,
-            city,
-            usState,
-            zip,
-            phone,
-            email,
-            handleChange
-        } = this.props;
+        const handleChange = this.props.handleChange;
+        const type = this.props.type;
 
         return (
             <div className="form-component">
+                <h2>Personal Information</h2>
                 <input 
                     name="firstName"
-                    value={firstName} 
                     placeholder="First Name" 
-                    onChange={handleChange}
+                    onChange={(e) => handleChange(e, type)}
                 />
                 <input 
                     name="lastName"
-                    value={lastName} 
                     placeholder="Last Name" 
-                    onChange={handleChange}
+                    onChange={(e) => handleChange(e, type)}
                 />
                 <input
                     name="address"
-                    value={address}
                     placeholder="Address"
-                    onChange={handleChange}
+                    onChange={(e) => handleChange(e, type)}
                 />
                 <input
                     name="city"
-                    value={city}
                     placeholder="City"
-                    onChange={handleChange}
+                    onChange={(e) => handleChange(e, type)}
                 />
                 <StateSelector
                     name="usState"
-                    value={usState} 
                     handleChange={handleChange}
+                    type='personal'
                 />
                 <input
                     name="zip"
-                    value={zip}
                     placeholder="ZIP Code"
-                    onChange={handleChange}
+                    onChange={(e) => handleChange(e, type)}
                 />
                 <input
                     name="phone"
-                    value={phone}
                     placeholder="Phone number"
-                    onChange={handleChange}
+                    onChange={(e) => handleChange(e, type)}
                 />
                 <input 
                     name="email"
-                    value={email} 
                     placeholder="Email" 
-                    onChange={handleChange}
+                    onChange={(e) => handleChange(e, type)}
                 />
             </div>
         )

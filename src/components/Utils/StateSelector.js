@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class StateSelector extends Component {
     render() {
         return (
-            <select name={this.props.name} onChange={this.props.handleChange}>
+            <select name={this.props.name} onChange={(e) => this.props.handleChange(e, this.props.type)}>
                 <option value="AL">AL</option>
                 <option value="AK">AK</option>
                 <option value="AR">AR</option>	

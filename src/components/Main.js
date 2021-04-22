@@ -1,35 +1,47 @@
-import React, { Component } from "react"
-import Form from "./Form"
-import Output from "./Output"
+import React, { Component } from 'react'
+import Form from './Form'
+import Output from './Output'
 
 export default class Main extends Component {
     constructor(props) {
         super(props)
     
         this.state = {
-            firstName: 'John',
-            lastName: 'Doe',
-            address: '123 Main St',
-            city: 'New York',
-            usState: '',
-            zip: '10001',
-            phone: '555-555-5555',
-            email: 'example@gmail.com'
+            personal: {
+                firstName: 'John',
+                lastName: 'Doe',
+                address: '123 Main St',
+                city: 'New York',
+                usState: 'AL',
+                zip: '10001',
+                phone: '555-555-5555',
+                email: 'example@gmail.com'
+            },
+            education: {
+                schoolName: 'x university',
+                schoolCity: 'boston',
+                schoolState: 'MA',
+                degree: 'Bachelor of Science',
+                major: 'Computer Science',
+                graduation: 'May 2018'
+            }
         }
     }
     
-    handleFormChange = e => {
+    handleFormChange = (e, type) => {
         const { name, value } = e.target;
+        const copy = this.state[type];
+        copy[name] = value;
         this.setState({
-            [name]: value
+            type: copy 
         })
-    }    
-
+    }
 
     render() {
+        console.log(this.state);
         return (
             <div className="main-container">
-                <Form data={this.state} handleFormChange={this.handleFormChange}/>
+                <Form handleFormChange={this.handleFormChange}/>
                 <Output data={this.state}/>
             </div>
         )
