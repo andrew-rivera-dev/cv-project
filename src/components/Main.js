@@ -24,7 +24,8 @@ export default class Main extends Component {
                 degree: 'Bachelor of Science',
                 major: 'Computer Science',
                 graduation: 'May 2018'
-            }
+            },
+            experience: []
         }
     }
     
@@ -41,7 +42,7 @@ export default class Main extends Component {
         console.log(this.state);
         return (
             <div className="main-container">
-                <Form handleFormChange={this.handleFormChange}/>
+                <Form experience={this.state.experience} handleFormChange={this.handleFormChange}/>
                 <Output data={this.state}/>
             </div>
         )

@@ -15,15 +15,16 @@ html, body {
 
 .main-container {
     border-radius: 10px;
-    display: flex;
-    justify-content: space-evenly;
+    text-align: center;
 }
 
 .main {
     border-radius: inherit;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    height: auto;
+    display: inline-block;
     margin: 50px;
+    text-align: left;
+    vertical-align: top;
     width: 40%;
 }
 
@@ -50,4 +51,6 @@ input, select {
 
 .output {
     padding: 10px;
+    position: sticky;
+    top: 50px;
 }
