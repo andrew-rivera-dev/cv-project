@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import ExperienceFormItem from './ExperienceFormItem'
+import FormExperienceItem from './FormExperienceItem'
 
 export default class Experience extends Component {
     render() {
         return (
             <div className="form-component">
                 <h2>Experience</h2>
-                <ExperienceFormItem handleExperienceChange={this.props.handleExperienceChange} /> 
+                <FormExperienceItem handleExperienceChange={this.props.handleExperienceChange} /> 
             </div>
         )
     }

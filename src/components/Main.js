@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Form from './Form/Form'
-import Output from './Output'
+import Output from './Output/Output'
 
 export default class Main extends Component {
     constructor(props) {
@@ -26,8 +26,14 @@ export default class Main extends Component {
                 graduation: 'May 2018'
             },
             experience: {
-                id1: {
-                    companyName: 'google'
+                defaultExperience: {
+                    companyName: 'google',
+                    companyCity: 'new york',
+                    companyState: 'NY',
+                    experienceDateStart: '01-01-2021',
+                    experienceDateEnd: '04-30-2021',
+                    jobTitle: 'Software Engineer',
+                    jobResponsibilities: 'develop, code review'
                 },
             }
         }

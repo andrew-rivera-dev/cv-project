@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import StateSelector from '../Utils/StateSelector'
 
-export default class ExperienceFormItem extends Component {
+export default class FormExperienceItem extends Component {
     render() {
         const handleStaticChange = this.props.handleStaticChange;
         const handleExperienceChange = this.props.handleExperienceChange;
@@ -9,7 +9,7 @@ export default class ExperienceFormItem extends Component {
         return (
             <div>
                 <input
-                    id="id1"
+                    id="defaultExperience"
                     name="companyName"
                     placeholder="Company name"
                     onChange={handleExperienceChange}
@@ -21,10 +21,6 @@ export default class ExperienceFormItem extends Component {
                 <StateSelector
                     name="companyState"
                     handleStaticChange={handleStaticChange}
-                />
-                <input
-                    name="companyCity"
-                    placeholder="Company city"
                 />
                 <input
                     name="startDate"

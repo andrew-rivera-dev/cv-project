@@ -51,7 +51,35 @@ input, select, textarea {
 }
 
 .output {
-    padding: 10px;
+    padding: 30px;
     position: sticky;
     top: 50px;
+}
+
+#output-header-container {
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+#output-header-name {
+    font-size: 24px;
+}
+
+#output-education-label {
+    border-bottom: 1px solid;
+    margin-bottom: 2px;
+}
+
+#output-education-school {
+    display: inline-block;
+    font-weight: bold;
+}
+
+#output-education-date {
+    float: right;
+}
+
+#output-education-degree {
+    font-style: italic;
 }
