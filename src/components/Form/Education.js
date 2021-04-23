@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import StateSelector from './Utils/StateSelector'
+import StateSelector from '../Utils/StateSelector'
 
 export default class Education extends Component {
     render() {
-        const handleChange = this.props.handleChange;
+        const handleStaticChange = this.props.handleStaticChange;
         const type = this.props.type;
 
         return (
@@ -12,32 +12,32 @@ export default class Education extends Component {
                 <input
                     name="schoolName"
                     placeholder="School name" 
-                    onChange={(e) => handleChange(e, type)}
+                    onChange={(e) => handleStaticChange(e, type)}
                 />
                 <input
                     name="schoolCity"
                     placeholder="School city" 
-                    onChange={(e) => handleChange(e, type)}
+                    onChange={(e) => handleStaticChange(e, type)}
                 />
                 <StateSelector
                     name="schoolState"
-                    handleChange={handleChange}
+                    handleStaticChange={handleStaticChange}
                     type='education'
                 />
                 <input
                     name="degree"
                     placeholder="Degree" 
-                    onChange={(e) => handleChange(e, type)}
+                    onChange={(e) => handleStaticChange(e, type)}
                 />
                 <input
                     name="major"
                     placeholder="Major" 
-                    onChange={(e) => handleChange(e, type)}
+                    onChange={(e) => handleStaticChange(e, type)}
                 />
                 <input
                     name="graduation"
                     placeholder="Graduation" 
-                    onChange={(e) => handleChange(e, type)}
+                    onChange={(e) => handleStaticChange(e, type)}
                 />
             </div>
         )

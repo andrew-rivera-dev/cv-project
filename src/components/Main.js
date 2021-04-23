@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Form from './Form'
+import Form from './Form/Form'
 import Output from './Output'
 
 export default class Main extends Component {
@@ -25,11 +25,15 @@ export default class Main extends Component {
                 major: 'Computer Science',
                 graduation: 'May 2018'
             },
-            experience: []
+            experience: {
+                id1: {
+                    companyName: 'google'
+                },
+            }
         }
     }
     
-    handleFormChange = (e, type) => {
+    handleStaticChange = (e, type) => {
         const { name, value } = e.target;
         const copy = this.state[type];
         copy[name] = value;
@@ -38,11 +42,23 @@ export default class Main extends Component {
         })
     }
 
+    handleExperienceChange = (e) => {
+        const { id, name, value } = e.target;
+        const copy = this.state.experience;
+        copy[id][name] = value;
+        this.setState({
+            experience: copy
+        })
+    }
+
     render() {
-        console.log(this.state);
         return (
             <div className="main-container">
-                <Form experience={this.state.experience} handleFormChange={this.handleFormChange}/>
+                <Form 
+                    experience={this.state.experience} 
+                    handleStaticChange={this.handleStaticChange} 
+                    handleExperienceChange={this.handleExperienceChange} 
+                />
                 <Output data={this.state}/>
             </div>
         )
