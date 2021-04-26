@@ -13,7 +13,7 @@ export default class OutputEducationItem extends Component {
     
         return (
             <div id="output-education-container">
-                <h4 id="output-education-label">EDUCATION</h4>
+                <h4 className="output-section-label">EDUCATION</h4>
                 <div id="output-education-school">{schoolName}, {schoolCity} {schoolState}</div>
                 <div id="output-education-date">{graduation}</div>
                 <div id="output-education-degree">{degree}, {major}</div>

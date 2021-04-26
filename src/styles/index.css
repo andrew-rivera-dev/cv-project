@@ -66,7 +66,7 @@ input, select, textarea {
     font-size: 24px;
 }
 
-#output-education-label {
+.output-section-label {
     border-bottom: 1px solid;
     margin-bottom: 2px;
 }
@@ -81,5 +81,17 @@ input, select, textarea {
 }
 
 #output-education-degree {
+    font-style: italic;
+}
+
+.output-experience-company {
+    display: inline-block;
+}
+
+.output-experience-date {
+    float: right;
+}
+
+.output-experience-job-title {
     font-style: italic;
 }
