@@ -38,7 +38,11 @@ h2 {
     padding: 0px 20px 20px;
 }
 
-input, select, textarea {
+.form-experience-item {
+    border-radius: 10px;
+}
+
+input, select, textarea, #add-experience-button, .delete-experience-button {
     background-color: transparent;
     border: 1px solid lightgrey;
     border-radius: 5px;
@@ -48,6 +52,17 @@ input, select, textarea {
     outline: none;
     padding: 10px;
     width: 90%;
+}
+
+.delete-experience-button {
+    background-color: lightcoral;
+    margin-top: 0;
+    width: 93%;
+}
+
+#add-experience-button {
+    background-color: lightgreen;
+    width: 93%;
 }
 
 .output {

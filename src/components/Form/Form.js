@@ -17,12 +17,16 @@ export default class Form extends Component {
         this.props.handleExperienceChange(e);
     }
 
+    handleAddExperience = e => {
+        this.props.handleAddExperience(e);
+    }
+
     render() {
         return (
             <div className="main form">
                 <Personal type="personal" handleStaticChange={this.handleStaticChange} />
                 <Education type="education" handleStaticChange={this.handleStaticChange} />
-                <Experience handleExperienceChange={this.handleExperienceChange} />
+                <Experience data={this.props.data} handleAddExperience={this.handleAddExperience} handleExperienceChange={this.handleExperienceChange} />
             </div>
         );
     }

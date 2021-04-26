@@ -18,7 +18,7 @@ export default class OutputExperienceItem extends Component {
 
         const jobResponsibilitiesOutput = jobResponsibilitiesSplit.map(item => {
             return <li>{item}</li>;
-        })
+        });
 
         return (
             <div id={id}>
