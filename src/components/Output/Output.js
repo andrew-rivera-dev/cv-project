@@ -9,8 +9,8 @@ export default class Output extends Component {
         const experience = this.props.data.experience;
 
         const addedExperienceElements = Object.keys(experience).map(item => {
-            return <OutputExperienceItem key={uuidv4()} id={item} experience={experience} />
-        })
+            return <OutputExperienceItem key={uuidv4()} expid={item} experience={experience} />
+        });
 
         return ( 
             <div className="main output">

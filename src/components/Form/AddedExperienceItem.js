@@ -3,13 +3,11 @@ import DefaultExperienceItem from './DefaultExperienceItem'
 
 export default class AddedExperienceItem extends Component {
     render() {
-        const type = this.props.type;
-        const handleStaticChange = this.props.handleStaticChange;
-        const handleExperienceChange = this.props.handleExperienceChange;
+        const { expid, handleExperienceChange } = this.props;
 
         return (
             <div>
-                <DefaultExperienceItem type={type} handleStaticChange={handleStaticChange} handleExperienceChange={handleExperienceChange} />
+                <DefaultExperienceItem expid={expid} handleExperienceChange={handleExperienceChange} />
                 <button className="delete-experience-button" type="button">
                     Delete experience
                 </button>

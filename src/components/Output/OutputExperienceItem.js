@@ -3,8 +3,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default class OutputExperienceItem extends Component {
     render() {
-        const { id, experience } = this.props;
-        const current = experience[id];
+        const { expid, experience } = this.props;
+        const current = experience[expid];
         const {
             companyName,
             companyCity,
@@ -22,7 +22,7 @@ export default class OutputExperienceItem extends Component {
         });
 
         return (
-            <div id={id}>
+            <div>
                 <div className="output-experience-company">{companyName}, {companyCity}, {companyState}</div>
                 <div className="output-experience-date">{experienceDateStart}-{experienceDateEnd}</div>
                 <div className="output-experience-job-title">{jobTitle}</div>

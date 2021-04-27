@@ -32,7 +32,7 @@ export default class Personal extends Component {
                 <StateSelector
                     name="usState"
                     handleChange={handleStaticChange}
-                    type='personal'
+                    expid='personal'
                 />
                 <input
                     name="zip"

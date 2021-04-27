@@ -12,47 +12,47 @@ export default class FormExperienceItem extends Component {
     }
     
     render() {
-        const { handleExperienceChange, type } = this.props;
+        const { handleExperienceChange, expid } = this.props;
 
         return (
             <div className="form-experience-item">
                 <input
                     name="companyName"
-                    onChange={(e) => handleExperienceChange(e, type)}
+                    onChange={(e) => handleExperienceChange(e, expid)}
                     placeholder="Company name"
                 />
                 <input
                     name="companyCity"
-                    onChange={(e) => handleExperienceChange(e, type)}
+                    onChange={(e) => handleExperienceChange(e, expid)}
                     placeholder="Company city"
                 />
                 <StateSelector
                     name="companyState"
                     handleChange={handleExperienceChange}
-                    type={type}
+                    expid={expid}
                 />
                 <input
                     name="experienceDateStart"
                     onBlur={this.onDateBlur}
                     onFocus={this.onDateFocus}
-                    onChange={(e) => handleExperienceChange(e, type)}
+                    onChange={(e) => handleExperienceChange(e, expid)}
                     placeholder="Job start date"
                 />
                 <input
                     name="experienceDateEnd"
                     onBlur={this.onDateBlur}
                     onFocus={this.onDateFocus}
-                    onChange={(e) => handleExperienceChange(e, type)}
+                    onChange={(e) => handleExperienceChange(e, expid)}
                     placeholder="Job end date"
                 />
                 <input
                     name="jobTitle"
-                    onChange={(e) => handleExperienceChange(e, type)}
+                    onChange={(e) => handleExperienceChange(e, expid)}
                     placeholder="Job title"
                 />
                 <textarea
                     name="jobResponsibilities"
-                    onChange={(e) => handleExperienceChange(e, type)}
+                    onChange={(e) => handleExperienceChange(e, expid)}
                     placeholder="Job responsibilities"
                 />
             </div>

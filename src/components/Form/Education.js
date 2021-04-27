@@ -22,7 +22,7 @@ export default class Education extends Component {
                 <StateSelector
                     name="schoolState"
                     handleChange={handleStaticChange}
-                    type='education'
+                    expid='education'
                 />
                 <input
                     name="degree"

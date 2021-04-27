@@ -13,8 +13,8 @@ export default class Form extends Component {
         this.props.handleStaticChange(e, type);
     }
 
-    handleExperienceChange = (e, type) => {
-        this.props.handleExperienceChange(e, type);
+    handleExperienceChange = (e, expid) => {
+        this.props.handleExperienceChange(e, expid);
     }
 
     handleAddExperience = e => {
