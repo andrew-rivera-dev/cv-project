@@ -10,6 +10,7 @@ export default class Main extends Component {
         this.handleStaticChange = this.handleStaticChange.bind(this);
         this.handleExperienceChange = this.handleExperienceChange.bind(this);
         this.handleAddExperience = this.handleAddExperience.bind(this);
+        this.handleDeleteExperience = this.handleDeleteExperience.bind(this);
 
         this.state = {
             personal: {
@@ -53,18 +54,16 @@ export default class Main extends Component {
         })
     }
 
-    handleExperienceChange = (e, type) => {
+    handleExperienceChange = (e, expid) => {
         const { name, value } = e.target;
         const copy = this.state.experience;
-        console.log(copy);
-        console.log(type);
-        copy[type][name] = value;
+        copy[expid][name] = value;
         this.setState({
             experience: copy
-        })
+        });
     }
 
-    handleAddExperience = (e) => {
+    handleAddExperience = () => {
         const copy = this.state.experience;
         const newID = `experience_${uuidv4()}`;
 
@@ -77,6 +76,15 @@ export default class Main extends Component {
             jobTitle: 'Software Engineer',
             jobResponsibilities: 'develop, code review'
         }
+
+        this.setState({
+            experience: copy
+        });
+    }
+
+    handleDeleteExperience = (expid) => {
+        const copy = this.state.experience;
+        delete copy[expid];
 
         this.setState({
             experience: copy
