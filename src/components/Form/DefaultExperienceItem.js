@@ -12,60 +12,49 @@ export default class FormExperienceItem extends Component {
     }
     
     render() {
-        const id = this.props.id;
-        const handleStaticChange = this.props.handleStaticChange;
-        const handleExperienceChange = this.props.handleExperienceChange;
+        const { handleExperienceChange, type } = this.props;
 
         return (
             <div className="form-experience-item">
                 <input
-                    id={id}
                     name="companyName"
-                    onChange={handleExperienceChange}
+                    onChange={(e) => handleExperienceChange(e, type)}
                     placeholder="Company name"
                 />
                 <input
-                    id={id}
                     name="companyCity"
-                    onChange={handleExperienceChange}
+                    onChange={(e) => handleExperienceChange(e, type)}
                     placeholder="Company city"
                 />
                 <StateSelector
-                    id={id}
                     name="companyState"
-                    handleStaticChange={handleStaticChange}
+                    handleChange={handleExperienceChange}
+                    type={type}
                 />
                 <input
-                    id={id}
                     name="experienceDateStart"
                     onBlur={this.onDateBlur}
                     onFocus={this.onDateFocus}
-                    onChange={handleExperienceChange}
+                    onChange={(e) => handleExperienceChange(e, type)}
                     placeholder="Job start date"
                 />
                 <input
-                    id={id}
                     name="experienceDateEnd"
                     onBlur={this.onDateBlur}
                     onFocus={this.onDateFocus}
-                    onChange={handleExperienceChange}
+                    onChange={(e) => handleExperienceChange(e, type)}
                     placeholder="Job end date"
                 />
                 <input
-                    id={id}
                     name="jobTitle"
-                    onChange={handleExperienceChange}
+                    onChange={(e) => handleExperienceChange(e, type)}
                     placeholder="Job title"
                 />
                 <textarea
-                    id={id}
                     name="jobResponsibilities"
-                    onChange={handleExperienceChange}
+                    onChange={(e) => handleExperienceChange(e, type)}
                     placeholder="Job responsibilities"
                 />
-                <button className="delete-experience-button" type="button">
-                    Delete experience
-                </button>
             </div>
         )
     }

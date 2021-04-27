@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { v4 as uuidv4 } from 'uuid';
 
 export default class OutputExperienceItem extends Component {
     render() {
@@ -17,7 +18,7 @@ export default class OutputExperienceItem extends Component {
         const jobResponsibilitiesSplit = jobResponsibilities.split('\n');
 
         const jobResponsibilitiesOutput = jobResponsibilitiesSplit.map(item => {
-            return <li>{item}</li>;
+            return <li key={uuidv4()}>{item}</li>;
         });
 
         return (

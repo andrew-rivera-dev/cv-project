@@ -13,8 +13,8 @@ export default class Form extends Component {
         this.props.handleStaticChange(e, type);
     }
 
-    handleExperienceChange = e => {
-        this.props.handleExperienceChange(e);
+    handleExperienceChange = (e, type) => {
+        this.props.handleExperienceChange(e, type);
     }
 
     handleAddExperience = e => {
@@ -26,7 +26,11 @@ export default class Form extends Component {
             <div className="main form">
                 <Personal type="personal" handleStaticChange={this.handleStaticChange} />
                 <Education type="education" handleStaticChange={this.handleStaticChange} />
-                <Experience data={this.props.data} handleAddExperience={this.handleAddExperience} handleExperienceChange={this.handleExperienceChange} />
+                <Experience 
+                    data={this.props.data} 
+                    handleAddExperience={this.handleAddExperience} 
+                    handleExperienceChange={this.handleExperienceChange}
+                />
             </div>
         );
     }

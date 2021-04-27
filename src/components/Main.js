@@ -53,10 +53,12 @@ export default class Main extends Component {
         })
     }
 
-    handleExperienceChange = e => {
-        const { id, name, value } = e.target;
+    handleExperienceChange = (e, type) => {
+        const { name, value } = e.target;
         const copy = this.state.experience;
-        copy[id][name] = value;
+        console.log(copy);
+        console.log(type);
+        copy[type][name] = value;
         this.setState({
             experience: copy
         })

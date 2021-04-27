@@ -21,7 +21,7 @@ export default class Education extends Component {
                 />
                 <StateSelector
                     name="schoolState"
-                    handleStaticChange={handleStaticChange}
+                    handleChange={handleStaticChange}
                     type='education'
                 />
                 <input

@@ -31,7 +31,7 @@ export default class Personal extends Component {
                 />
                 <StateSelector
                     name="usState"
-                    handleStaticChange={handleStaticChange}
+                    handleChange={handleStaticChange}
                     type='personal'
                 />
                 <input
