@@ -21,6 +21,10 @@ export default class Form extends Component {
         this.props.handleAddExperience(e);
     }
 
+    handleDeleteExperience = (expid) => {
+        this.props.handleDeleteExperience(expid);
+    }
+
     render() {
         return (
             <div className="main form">
@@ -30,6 +34,7 @@ export default class Form extends Component {
                     data={this.props.data} 
                     handleAddExperience={this.handleAddExperience} 
                     handleExperienceChange={this.handleExperienceChange}
+                    handleDeleteExperience={this.handleDeleteExperience}
                 />
             </div>
         );

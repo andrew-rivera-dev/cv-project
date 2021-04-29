@@ -99,6 +99,7 @@ export default class Main extends Component {
                     handleStaticChange={this.handleStaticChange} 
                     handleExperienceChange={this.handleExperienceChange} 
                     handleAddExperience={this.handleAddExperience}
+                    handleDeleteExperience={this.handleDeleteExperience}
                 />
                 <Output data={this.state}/>
             </div>

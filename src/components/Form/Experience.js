@@ -4,13 +4,18 @@ import AddedExperienceItem from './AddedExperienceItem'
 
 export default class Experience extends Component {
     render() {
-        const handleExperienceChange = this.props.handleExperienceChange;
+        const {
+            handleAddExperience,
+            handleExperienceChange,
+            handleDeleteExperience
+        } = this.props;
+        
         const experience = this.props.data.experience;
         const experienceItems = Object.keys(experience);
         const filteredItems = experienceItems.filter(item => item !== "defaultExperience");
 
         const filteredElements = filteredItems.map(item => {
-            return <AddedExperienceItem key={item} expid={item} handleExperienceChange={handleExperienceChange} />
+            return <AddedExperienceItem key={item} expid={item} handleExperienceChange={handleExperienceChange} handleDeleteExperience={handleDeleteExperience} />
         });
         
         return (
@@ -18,7 +23,7 @@ export default class Experience extends Component {
                 <h2>Experience</h2>
                 <DefaultExperienceItem expid="defaultExperience" handleExperienceChange={handleExperienceChange} />
                 {filteredElements}
-                <button id="add-experience-button" onClick={this.props.handleAddExperience}>Add experience</button>
+                <button id="add-experience-button" onClick={handleAddExperience}>Add experience</button>
             </div>
         )
     }
