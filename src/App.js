@@ -3,7 +3,7 @@ import Header from "./components/Header"
 import Main from "./components/Main"
 import "./styles/index.css"
 
-function App() {
+export default function App() {
   
   return (
     <div className="App">
@@ -12,5 +12,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
